@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router';
 import './App.css';
 import Home from './components/Home';
 import 'bulma/css/bulma.min.css';
+import '../src/components/Navbar.css'
 
 class App extends Component {
   render() {
