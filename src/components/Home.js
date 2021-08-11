@@ -46,7 +46,10 @@ class Home extends Component {
             <Navbar/>
             <div className="home-container">
             {/* no home-container esta o background color verde */}
-            <section>ABOUT</section>
+            <section className="homepage-about"><h1 id="name-page">Countries & Culture</h1><p>
+                This is a simple page with some cultural information about countries over the world.
+                <br/> Please click in some flag to know more about cusine, musics and artist of the country.
+            </p></section>
             <input className="search-filter-country" type="text" placeholder="Search Country" name="filterCountries" onChange={(e)=>{
                 this.handleSearchFilter(e)
             }}/>
