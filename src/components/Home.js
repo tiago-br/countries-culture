@@ -33,7 +33,7 @@ class Home extends Component {
         this.setState({
             searchCountries:filteredCountries
         })
-        console.log(this.state.searchCountries)
+        
         
       
     }

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const CardCountry = (props) => {
     return(
         <div className="card-country-flag">
-            <NavLink to={`/country${props.alpha3Code}`}>
+            <NavLink to={`/country${props.name}`}>
             <div className="nav-link-card-flag">
                 <div>
                     <img src={props.flag} alt={`flag-country${props.alpha3Code}`} className='card-flag' />
