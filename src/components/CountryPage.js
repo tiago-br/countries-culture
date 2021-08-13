@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import Navbar from "./Navbar";
+import RandomRecipeCard from "./RandomRecipeCard";
 
 
 
@@ -10,24 +11,40 @@ class CountryPage extends Component {
 
     state={
         country:{},
-        allArtists:[],
-        imgArtist:""
+        //allArtists:[],
+        //imgArtist:"",
+        recipes:{}
     }
 
-    componentDidMount(){
+    componentDidMount=async()=>{
 
-        axios.get(`https://restcountries.eu/rest/v2/name/${this.props.match.params.countryName}`).then(result=>{
-            this.setState({
-                country:result.data[0]
-            })
-                
+       const result = await axios.get(`https://restcountries.eu/rest/v2/name/${this.props.match.params.countryName}`)
+       const country = result.data[0]
+       let recipes = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country.demonym}`)
+       
+        
+       if(recipes.data.meals===null){
+            recipes ={
+                strMealThumb:"https://st.depositphotos.com/1007298/1493/i/950/depositphotos_14931205-stock-photo-open-old-recipe-book.jpg"
+            }
+       }else{
+            recipes = recipes.data.meals[Math.ceil(Math.random()*recipes.data.meals.length)]
+       }
+        
+       this.setState({
+         recipes,
+         country
+       })
+          
+
             
-        }).then(()=>
-            axios.get(`https://musicbrainz.org/ws/2/artist?query=area:${this.state.country.name}&limit=20&fmt=json`)).then(result=>{             
-                this.setState({
-                    allArtists:result.data.artists
-                })
-            })
+       
+        // .then(()=>
+        //     axios.get(`https://musicbrainz.org/ws/2/artist?query=area:${this.state.country.name}&limit=20&fmt=json`)).then(result=>{             
+        //         this.setState({
+        //             allArtists:result.data.artists
+        //         })
+        //     })
             // puxando nome do artista na API musicBrainz
             // .then(()=>{
             //     this.setState({
@@ -39,7 +56,7 @@ class CountryPage extends Component {
            
 
     render(){
-        console.log(this.state.allArtists)
+        console.log(this.state.recipes)
         return (
             
             <div>
@@ -57,7 +74,7 @@ class CountryPage extends Component {
                     </section>
                     <section>
                         <div>
-
+                            <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.recipes.demonym}/>
                         </div>
                         <div>
 
