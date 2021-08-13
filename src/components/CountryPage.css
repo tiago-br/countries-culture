@@ -70,7 +70,9 @@
     .article-country{
         width: 80vw;
     }
-    
+}
 
-
+.random-card-img{
+    width: 22vw;
+    height: 30vh;
 }
