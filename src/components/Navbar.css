@@ -49,9 +49,10 @@
     display:flex;
     justify-content: space-around;
     
-    background-color:#003049;
+    background-color:#1A535C;
     flex-direction: column;
     height: 20vh;
+    align-items: center;
     }
     #logo-nav{
         height: 3.5vh;
@@ -61,12 +62,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #000000;
+        border-radius: 2vh;
         width: 50vw;
         height: 5vh;
         color: rgb(54, 54, 54);
-        background-color: #ecb74b;
-        margin-left: 5vw;
+        background-color: #FFE66D;
         font-size: 1.1rem;
         
     }

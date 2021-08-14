@@ -1,42 +1,19 @@
-import { Component } from "react";
-import axios from 'axios'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-class RandomCardArtist extends Component{
-    state = { 
-        artist:"",
-        imgArtist:""
-    }
-    componentDidMount(){
-           
-    const options = {
-    method: 'GET',
-    url: 'https://theaudiodb.p.rapidapi.com/search.php',
-    params: {s:this.props.artistName},
-    headers:{
-        'x-rapidapi-key':"d3cc5e807amsh60e1b2222e08699p178b42jsna1cc25c337c8",
-        'x-rapidapi-host':'theaudiodb.p.rapidapi.com'
-    }
-    };
-    axios.request(options).then((result)=>{
-        this.setState({
-            artist:result
-        })
-        console.log(result.data)
-    }).then(()=>{
-        this.setState({
-            imgArtist:this.state.artist
-        })
-        
-    })
-    }
+const RandomCardArtist = (props) =>{
 
-    render(){
-        console.log(this.params)
-        //console.log(this.state.artist)
-        return(
-            <div><img src={""} alt="artist-img"/></div>
-        )
-    }
+    return(
+        <div class="rnd-card-container">
+            <div className="card-img-rnd">
+                <img className="random-card-img" src={props.artistImg} alt="artist"/><br/>
+                <p>{props.artistName}</p>
+            </div>
+            <div className="rnd-card-text-link">
+                <NavLink className="card-link"to="#">Look more artists</NavLink>
+            </div>
+        </div>
+    )
 }
 
 export default RandomCardArtist

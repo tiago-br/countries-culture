@@ -2,8 +2,9 @@
 .country-page-container{
     background-color: #F7FFF7;
     margin: 0;
-    padding-top: 8vh;
-    height: 87vh;
+    padding-top: 5vh;
+    height: 47vh;
+   
 }
 @media (min-width: 1025px){
 .countrypage-img-country{
@@ -75,4 +76,45 @@
 .random-card-img{
     width: 22vw;
     height: 30vh;
+}
+
+.random-links-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-img-rnd p{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.rnd-card-text-link {
+    text-align: center;
+}
+
+.card-link{
+    width: 10vw;
+    border-radius: 2vh;
+    color:rgb(54, 54, 54) ;
+    padding: 6px;
+    background-color: #FFE66D;
+}
+
+.card-link:hover{
+    width: 10vw;
+    border-radius: 2vh;
+    color:rgb(54, 54, 54) ;
+    padding: 6px;
+    background-color: #f8c255d3;
+}
+
+.random-card-img:hover{
+    width: 19vw;
+    height: 26vh;
+    border:4px solid #4ECDC4;
+    border-radius: 2px;
+}
+
+.random-links-cards{
+    background-color:#F7FFF7 ;
 }
