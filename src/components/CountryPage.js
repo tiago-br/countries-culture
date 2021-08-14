@@ -15,7 +15,6 @@ class CountryPage extends Component {
         //allArtists:[],
         //imgArtist:"",
         recipes:{},
-        hasLoaded:false
     }
 
     componentDidMount=async()=>{
@@ -36,7 +35,6 @@ class CountryPage extends Component {
        this.setState({
          recipes,
          country,
-         hasLoaded: true
        })
           
 
@@ -81,7 +79,7 @@ class CountryPage extends Component {
                             <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.recipes.demonym}/>
                         </div>
                         <div>
-                            {this.state.hasLoaded ? <RandomPlaylist name={this.state.country.name} demonym={this.state.country.demonym}/> : <p></p>}
+
                         </div>
                         <div>
                             <div>
