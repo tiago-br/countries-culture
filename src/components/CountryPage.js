@@ -15,6 +15,9 @@ class CountryPage extends Component {
         //allArtists:[],
         //imgArtist:"",
         recipes:{},
+        hasLoaded: false,
+        randomPlaylist: "",
+        load:false
     }
 
     componentDidMount=async()=>{
@@ -35,6 +38,7 @@ class CountryPage extends Component {
        this.setState({
          recipes,
          country,
+         load:true,
        })
           
 
@@ -57,8 +61,6 @@ class CountryPage extends Component {
            
 
     render(){
-        console.log(this.state.recipes)
-        console.log(this.state)
         return (
             
             <div>
