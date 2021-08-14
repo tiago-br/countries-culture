@@ -75,7 +75,7 @@ class CountryPage extends Component {
                             <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.country.demonym} meal={this.state.recipes.strMeal}countryName={this.props.match.params.countryName}/>
                         </div>
                         <div>
-                         {this.state.hasLoaded ? <RandomPlaylist name={this.state.country.name} demonym={this.state.country.demonym}/> : <p></p>}
+                        
                         </div>
                         <div>     
                             
