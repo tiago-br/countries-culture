@@ -16,9 +16,7 @@ class CountryPage extends Component {
         //allArtists:[],
         //imgArtist:"",
         recipes:{},
-        artistImg:"",
-        artist:"",
-        hasLoaded: "",
+        hasLoaded: false,
         randomPlaylist: "",
         load:false
     }
