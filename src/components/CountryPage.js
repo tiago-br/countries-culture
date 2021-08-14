@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import Navbar from "./Navbar";
+import RandomPlaylist from "./RandomPlaylist";
 import RandomRecipeCard from "./RandomRecipeCard";
 
 
@@ -13,7 +14,8 @@ class CountryPage extends Component {
         country:{},
         //allArtists:[],
         //imgArtist:"",
-        recipes:{}
+        recipes:{},
+        hasLoaded:false
     }
 
     componentDidMount=async()=>{
@@ -33,7 +35,8 @@ class CountryPage extends Component {
         
        this.setState({
          recipes,
-         country
+         country,
+         hasLoaded: true
        })
           
 
@@ -57,6 +60,7 @@ class CountryPage extends Component {
 
     render(){
         console.log(this.state.recipes)
+        console.log(this.state)
         return (
             
             <div>
@@ -77,7 +81,7 @@ class CountryPage extends Component {
                             <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.recipes.demonym}/>
                         </div>
                         <div>
-
+                            {this.state.hasLoaded ? <RandomPlaylist name={this.state.country.name} demonym={this.state.country.demonym}/> : <p></p>}
                         </div>
                         <div>
                             <div>
