@@ -5,19 +5,14 @@ import RandomPlaylist from "./RandomPlaylist";
 import RandomRecipeCard from "./RandomRecipeCard";
 
 
-
-
-
 class CountryPage extends Component {
 
     state={
         country:{},
-        //allArtists:[],
-        //imgArtist:"",
         recipes:{},
         hasLoaded: false,
         randomPlaylist: "",
-        load:false
+        hasLoaded:false
     }
 
     componentDidMount=async()=>{
@@ -38,24 +33,9 @@ class CountryPage extends Component {
        this.setState({
          recipes,
          country,
-         load:true,
+         hasLoaded:true,
        })
-          
-
-            
-       
-        // .then(()=>
-        //     axios.get(`https://musicbrainz.org/ws/2/artist?query=area:${this.state.country.name}&limit=20&fmt=json`)).then(result=>{             
-        //         this.setState({
-        //             allArtists:result.data.artists
-        //         })
-        //     })
-            // puxando nome do artista na API musicBrainz
-            // .then(()=>{
-            //     this.setState({
-            //         rndartist:this.state.allArtists[Math.floor(Math.random()*this.state.allArtists.length)]
-            //     })
-            // })
+    
     }
         
            
@@ -65,7 +45,7 @@ class CountryPage extends Component {
             
             <div>
                 <Navbar/>
-                {this.state.load?
+                {this.state.hasLoaded?
                 <>
                 <div className="country-page-container">
                     <section className="country-details">
@@ -84,7 +64,7 @@ class CountryPage extends Component {
                             <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.country.demonym} meal={this.state.recipes.strMeal}countryName={this.props.match.params.countryName}/>
                         </div>
                         <div>
-                        
+                            {this.state.hasLoaded ? <RandomPlaylist name={this.state.country.name} demonym={this.state.country.demonym}/> : <p></p>}
                         </div>
                         <div>     
                             
@@ -96,8 +76,6 @@ class CountryPage extends Component {
                         <div className="img-loading-container"><img className="img-loading"src="https://i.pinimg.com/originals/aa/55/60/aa55602cfbce86ac0defd85c9e2672a0.png"alt="Loading"/><h1>Loading...</h1></div>
                     </div>
                     }
-                
-
 
             </div>
         )
