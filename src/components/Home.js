@@ -54,7 +54,7 @@ class Home extends Component {
                 this.handleSearchFilter(e)
             }}/>
                 <div className="home-container-cards">
-                    {this.state.searchCountries.map(country => <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name} />) }             
+                    {this.state.searchCountries.map(country => <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/>) }             
             </div>
             </div>
         </div>

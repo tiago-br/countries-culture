@@ -1,45 +1,49 @@
-import axios from "axios";
 import { Component } from "react";
+import axios from "axios";
+
 import Navbar from "./Navbar";
+import RandomMovieCard from "./RandomMovieCard";
 import RandomPlaylist from "./RandomPlaylist";
 import RandomRecipeCard from "./RandomRecipeCard";
 
 
 class CountryPage extends Component {
-
     state={
         country:{},
         recipes:{},
+        movies: [],
+        movie: {},
         hasLoaded: false,
         randomPlaylist: "",
-        hasLoaded:false
     }
 
     componentDidMount=async()=>{
 
-       const result = await axios.get(`https://restcountries.eu/rest/v2/name/${this.props.match.params.countryName}`)
-       const country = result.data[0]
-       let recipes = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country.demonym}`)
-       
-        
-       if(recipes.data.meals===null){
+        const result = await axios.get(`https://restcountries.eu/rest/v2/name/${this.props.match.params.countryName}`)
+        const country = result.data[0]
+        let recipes = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country.demonym}`)
+        let moviesByName = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country.name}&include_adult=false`)
+        let moviesByDemonym = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country.demonym}&include_adult=false`)
+        let movies = [...moviesByName.data.results, ...moviesByDemonym.data.results];
+        let movie = movies[Math.ceil(Math.random()*movies.length)]
+
+        if(recipes.data.meals===null){
             recipes ={
                 strMealThumb:"https://st.depositphotos.com/1007298/1493/i/950/depositphotos_14931205-stock-photo-open-old-recipe-book.jpg"
             }
-       }else{
+        }else{
             recipes = recipes.data.meals[Math.ceil(Math.random()*recipes.data.meals.length)]
-       }
-        
-       this.setState({
-         recipes,
-         country,
-         hasLoaded:true,
-       })
-    
+        }
+        this.setState({
+            recipes,
+            country,
+            movies,
+            movie,
+            hasLoaded:true,
+        })
     }
         
            
-
     render(){
         return (
             
@@ -61,13 +65,13 @@ class CountryPage extends Component {
                 </div>
                     <section className="random-links-cards">
                         <div>
-                            <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.country.demonym} meal={this.state.recipes.strMeal}countryName={this.props.match.params.countryName}/>
+                            <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.country.demonym} meal={this.state.recipes.strMeal} countryName={this.props.match.params.countryName}/>
+                        </div>
+                        <div>
+                            <RandomMovieCard movie={this.state.movie} demonym={this.state.country.demonym} countryName={this.props.match.params.countryName} />
                         </div>
                         <div>
                             {this.state.hasLoaded ? <RandomPlaylist name={this.state.country.name} demonym={this.state.country.demonym}/> : <p></p>}
-                        </div>
-                        <div>     
-                            
                         </div>
                     </section>
                     </>

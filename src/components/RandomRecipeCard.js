@@ -12,7 +12,7 @@ const RandomRecipeCard = (props) =>{
             <h3 className="rnd-card-text-link">no recipe was found</h3>
             :
             <div className="rnd-card-text-link">
-                <NavLink className="card-link" to={`/country${props.countryName}/recipes${props.demonym}`}>Look more recipes</NavLink>
+                <NavLink className="card-link" to={`/country${props.countryName}/recipes${props.demonym}`}>See more recipes</NavLink>
             </div>
         }
         </>

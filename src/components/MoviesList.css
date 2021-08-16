@@ -1,0 +1,48 @@
+.movies-page {
+    background-color: #F7FFF7;
+}
+
+.country-flag {
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+.country-flag img {
+    height: 7vh;
+    width: auto;
+}
+.country-flag span {
+    padding-left: 3vw;
+    color:rgb(54, 54, 54);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    text-align: center;
+}
+.movie-card p {
+    text-align: center;
+    color:rgb(54, 54, 54);
+    width: 35vh;
+}
+.movie-img {
+    width: 14vw;
+    height: 40vh;
+    text-align: center;
+}
+
+.movie-img:hover{
+    width: 12vw;
+    height: 38vh;
+    text-align: center;
+    border:3px solid #4ECDC4;
+    border-radius: 2px;
+}
