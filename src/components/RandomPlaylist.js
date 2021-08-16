@@ -7,6 +7,7 @@ import './RandomPlaylist.css';
 class RandomPlaylist extends Component {
     state = {
         hasLoaded: false,
+        playlists: null,
         randomPlaylist: null,
     }
 
@@ -29,7 +30,7 @@ class RandomPlaylist extends Component {
 
             const token = response.data.access_token;
 
-            const playlist = await axios.get(
+            const getPlaylists = await axios.get(
                 `https://api.spotify.com/v1/search?q=${this.props.demonym}&type=playlist`,
                 {
                     headers: {
@@ -37,14 +38,18 @@ class RandomPlaylist extends Component {
                     },
                 }
             );
+            let playlists = getPlaylists.data.playlists.items;
+            let randomPlaylist = playlists.[Math.ceil(Math.random()*playlists.length)]
             this.setState({
                 hasLoaded: true,
-                randomPlaylist: playlist.data.playlists.items[0]
+                playlists,
+                randomPlaylist
             })
         } catch (err) {
             console.error(err);
             this.setState({
                 hasLoaded: true,
+                playlists: null,
                 randomPlaylist: null
             })
         }
@@ -59,11 +64,10 @@ class RandomPlaylist extends Component {
     }
 
     render() {
-        console.log(this.state.randomPlaylist);
         if (this.state.randomPlaylist === null || this.state.randomPlaylist === undefined) {
             return (<div>
             <img src='https://blog.influx.com.br/storage/app/media/uploaded-files/music.jpeg' alt='not-found-img' id='not-found-img'/>
-            <h1>Songs from this country not found</h1>
+            <h3 className='rnd-card-text-link'>Songs not found</h3>
             </div>)
         } else {
             return (
@@ -72,7 +76,8 @@ class RandomPlaylist extends Component {
                         src={this.formatURL(this.state.randomPlaylist.external_urls.spotify)}
                         title={this.state.randomPlaylist.name}
                     ></iframe>
-                    <h1>Playlist of songs from {this.props.name} or the most listened songs</h1>
+                    <h1>Playlist of songs from {this.props.name} <br/>
+                        or the most listened songs</h1>                
                 </div>
             )
         }

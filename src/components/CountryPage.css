@@ -101,3 +101,13 @@
 .random-links-cards{
     background-color:#F7FFF7 ;
 }
+.random-movie-img{
+    width: 10vw;
+    height: 30vh;
+    text-align: center;
+}
+.not-found-img {
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
