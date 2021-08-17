@@ -1,7 +1,6 @@
 import { Component } from "react";
 import axios from 'axios'
 import Navbar from "./Navbar";
-import qs from 'query-string'
 import './RecipesList.css'
 import RecipesListCard from "./RecipeListCard";
 
