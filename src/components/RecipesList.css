@@ -3,7 +3,6 @@
     height: 90vh;
 }
 .flag-recipes{
-    padding-top: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,13 +11,15 @@
 .flag-recipes img {
     height: 7vh;
     width: auto;
+    vertical-align: middle;
 }
 .flag-recipes span{
     padding-left: 3vw;
     color:rgb(54, 54, 54);
     font-size: 3rem;
     font-weight: 700;
-    vertical-align: center;
+    vertical-align: middle;
+    
 }
 .recipes-container{
     display: flex;

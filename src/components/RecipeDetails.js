@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Navbar from "./Navbar";
 import axios from 'axios';
+import './RecipeDetails.css'
 
 class RecipeDetails extends Component{
     state={
@@ -11,21 +12,28 @@ class RecipeDetails extends Component{
         let {demonym,countryName,recipe} = this.props.match.params
         const curRecipe = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`)
         const country = await axios.get(`https://restcountries.eu/rest/v2/name/${countryName}`)
+
+        const arrRecipe = Object.entries(curRecipe.data.meals[0])
+        const ingredients = arrRecipe.filter(element=>{return element[0].includes("Ingredient") && element[1]})
+        const measure = arrRecipe.filter(element=>element[0].includes("Measure")&& element[1]) 
+        console.log(measure)
         this.setState({
             curRecipe:curRecipe.data.meals[0],
             load:true,
-            imgFlag:country.data[0].flag
+            imgFlag:country.data[0].flag,
+            ingredients,
+            measure
         })
     }
     render(){
-        console.log(this.state.imgFlag)
+        
         return(
             <div>
             <Navbar/>
             {this.state.load ?
                 <div>
-                    <div>
-                        <h1><img src={this.state.imgFlag} alt={`${this.props.match.params.countryName}-flag`}/>{this.props.match.params.recipe}</h1>
+                    <div className="container-title-recipe">
+                        <h1><img src={this.state.imgFlag} alt={`${this.props.match.params.countryName}-flag`}/><span>{this.props.match.params.recipe}</span></h1>
                     </div>
                 </div>
                     :

@@ -1,0 +1,18 @@
+.container-title-recipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+.container-title-recipe img {
+    height: 7vh;
+    width: auto;
+    vertical-align: middle;
+}
+.container-title-recipe span{
+    padding-left: 3vw;
+    color:rgb(54, 54, 54);
+    font-size: 3rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
