@@ -1,0 +1,42 @@
+.title-movie{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+.title-movie img{
+    height: 7vh;
+    width: auto;
+    vertical-align: middle;
+}
+.title-movie span{
+    padding-left: 3vw;
+    color:rgb(54, 54, 54);
+    font-size: 3rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+
+.movie-container {
+    margin: 0px 0px 0px 150px;
+    display: flex;
+    padding: 0px;
+    line-height: 15px;
+}
+
+.movie-page-img {
+    height: 350px;
+    width: auto;
+    margin: 50px 30px 30px 100px;
+}
+
+.movie-details {
+    width: 600px;
+    text-align: left;
+    color:rgb(54, 54, 54);
+}
+.movie-details p {
+    display: flex;
+    text-align: left;
+    color:rgb(54, 54, 54);
+}

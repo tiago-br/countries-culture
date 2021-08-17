@@ -15,8 +15,8 @@ class MoviesList extends Component {
     componentDidMount = async () => {
         const demonym = this.props.match.params.demonym
         const country = this.props.match.params.countryName 
-        let moviesByName = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country}&include_adult=false`)
-        let moviesByDemonym = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${demonym}&include_adult=false`)
+        const moviesByName = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country}&include_adult=false`)
+        const moviesByDemonym = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${demonym}&include_adult=false`)
         let movies = [...moviesByName.data.results, ...moviesByDemonym.data.results];
         let flag = await axios.get(`https://restcountries.eu/rest/v2/name/${country}`)
         flag = flag.data[0].flag
@@ -28,7 +28,6 @@ class MoviesList extends Component {
     }
 
     render(){
-        console.log(this.state.movies)
         return(
             <>
             <Navbar/>
@@ -39,7 +38,7 @@ class MoviesList extends Component {
                 </div>
                 <div className='movies-list'>
                     {this.state.movies.map((movie) => (
-                        <MoviesListCard className='movie-card' key={movie.id} movie={movie} demonym={this.props.match.params.demonym} countryName={this.props.match.params.countryName}/>
+                        <MoviesListCard className='movie-card' key={movie.id} movie={movie} id={movie.id} demonym={this.props.match.params.demonym} countryName={this.props.match.params.countryName}/>
                     ))}
                 </div>
             </div>
