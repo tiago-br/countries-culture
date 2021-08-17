@@ -25,7 +25,7 @@ class App extends Component {
           <Route exact path='/country:countryName/recipes:demonym' component={RecipesList}></Route>
           <Route exact path='/country:countryName/recipes:demonym/:recipe' component={RecipeDetails}></Route>
           <Route exact path='/country:countryName/movies:demonym' component={MoviesList}></Route>
-          <Route exact path='/country:countryName/movies:demonym/:movie' component={MovieDetails}></Route>
+          <Route exact path='/country:countryName/movies:demonym/:id' component={MovieDetails}></Route>
         </Switch>
       </div>
     );
