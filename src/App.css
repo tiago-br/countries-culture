@@ -6,3 +6,18 @@
     width: 8vw;
     height: 4vw;
 }
+
+.img-loading{
+    margin-top: 10vh;
+    width:20vw;
+    
+}
+.img-loading-container{
+    text-align: center;
+}
+
+.img-loading-container h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color:rgb(54, 54, 54)
+}

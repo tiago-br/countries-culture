@@ -7,6 +7,7 @@ import RandomPlaylist from "./RandomPlaylist";
 import RandomRecipeCard from "./RandomRecipeCard";
 
 
+
 class CountryPage extends Component {
     state={
         country:{},
@@ -59,7 +60,7 @@ class CountryPage extends Component {
                         <h3 className="country-page-capital">Capital: {this.state.country.capital}</h3>
                         <h3 className="country-page-capital">Region: {this.state.country.region}</h3>
                         <h3 className="country-page-capital">Area: {this.state.country.area} km<sup>2</sup></h3>
-                        <div className="country-page-list-languages">Language(s): <ul>{this.state.country.languages?this.state.country.languages.map(language=><li key={Math.random()}>{language.name} </li>):<li>language</li>}</ul></div>
+                        <div className="country-page-list-languages"><p>Language(s):</p> <ul>{this.state.country.languages?this.state.country.languages.map(language=><li key={Math.random()}>{language.name} </li>):<li>language</li>}</ul></div>
                         </article>
                     </section>
                 </div>
