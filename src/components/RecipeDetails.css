@@ -16,3 +16,60 @@
     font-weight: 700;
     vertical-align: middle;
 }
+
+.ingredients-container{
+    margin-left: 5vw;
+    width: 45vw;
+    display: flex;
+    color:rgb(54, 54, 54);
+    
+}
+.ingredients-container h2{
+    text-align: center;
+}
+
+.ingredients-container li{
+    margin-bottom: 3vh;
+    font-size: 1.2rem;
+}
+
+.constainer-list-measure ul{
+    list-style-type:none;
+}
+
+.constainer-list-measure{
+    margin-left: 5vw;
+}
+
+.container-recipe-details{
+    display: flex;
+    justify-content: space-around;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.img-container img{
+    width:35vw;
+}
+
+.instructions-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions-container h2{
+    font-size: 2rem;
+    
+}
+
+.instructions-container p{
+    width: 90vw;
+    text-align: justify;
+    font-size: 1.2rem;
+    
+}
