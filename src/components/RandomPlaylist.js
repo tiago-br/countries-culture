@@ -39,7 +39,7 @@ class RandomPlaylist extends Component {
                 }
             );
             let playlists = getPlaylists.data.playlists.items;
-            let randomPlaylist = playlists.[Math.ceil(Math.random()*playlists.length)]
+            let randomPlaylist = playlists[Math.floor(Math.random()*playlists.length)]
             this.setState({
                 hasLoaded: true,
                 playlists,
@@ -71,13 +71,13 @@ class RandomPlaylist extends Component {
             </div>)
         } else {
             return (
-                <div>
-                    <iframe
+                <div className='random-playlist'>
+                    <iframe 
                         src={this.formatURL(this.state.randomPlaylist.external_urls.spotify)}
                         title={this.state.randomPlaylist.name}
                     ></iframe>
-                    <h1>Playlist of songs from {this.props.name} <br/>
-                        or the most listened songs</h1>                
+                    <p>Playlist of songs from {this.props.name} <br/>
+                        or the most listened songs</p>                
                 </div>
             )
         }

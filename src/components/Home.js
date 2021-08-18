@@ -48,13 +48,13 @@ class Home extends Component {
             {/* no home-container esta o background color verde */}
             <section className="homepage-about"><h1 id="name-page">Countries & Culture</h1><p>
                 This is a simple page with some cultural information about countries over the world.
-                <br/> Please click in some flag to know more about cusine, musics and artist of the country.
+                <br/> Please click in some flag to know more about cuisine, movies and musics from that country.
             </p></section>
             <input className="search-filter-country" type="text" placeholder="Search Country" name="filterCountries" onChange={(e)=>{
                 this.handleSearchFilter(e)
             }}/>
                 <div className="home-container-cards">
-                    {this.state.searchCountries.map(country => <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/>) }             
+                    {this.state.searchCountries.map(country => country.demonym ? <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/> : null ) }             
             </div>
             </div>
         </div>

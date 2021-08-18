@@ -2,19 +2,18 @@
 .country-page-container{
     background-color: #F7FFF7;
     margin: 0;
-    padding-top: 5vh;
-    height: 47vh;
-   
+    padding-top: 5vh;   
 }
 @media (min-width: 1025px){
 .countrypage-img-country{
-    height: 40vh;
+    height: 30vh;
 }
 
 .country-details{
     display: flex;
     width: 85vw;
     margin-left: 7.5vw;
+    height: 35vh;
 }
 .article-country{
     width: 50vw;
@@ -35,10 +34,11 @@
 }
 
 .country-page-capital{
-    font-size: 1.2rem;
-    margin-bottom: 1vh;
-    padding-bottom: 2vh;
+    font-size: 1.1rem;
     color:rgb(54, 54, 54);
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
     margin-left: 5vw;
     margin-right: 5vw;
     border-bottom: 1px solid lightslategray;
@@ -46,14 +46,16 @@
 }
 
 .country-page-list-languages{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-top: 0;
     width: 40vw;
     color: rgb(54, 54, 54);
     display: flex;
     justify-content:flex-start ;
-    
+    position: relative;
+    top: -1vh;
 }
 .country-page-list-languages ul {
     display: flex;
@@ -93,6 +95,8 @@
 .random-links-cards {
     display: flex;
     justify-content: space-around;
+    background-color:#F7FFF7;
+    height: 50vh;
 }
 
 .card-img-rnd p{
@@ -127,6 +131,13 @@
     border-radius: 2px;
 }
 
-.random-links-cards{
-    background-color:#F7FFF7 ;
+.random-movie img{
+    width: 12vw;
 }
+
+.random-movie img:hover{
+    border:4px solid #4ECDC4;
+    border-radius: 2px;
+    width: 10vw;
+}
+

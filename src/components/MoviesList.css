@@ -3,16 +3,18 @@
 }
 
 .country-flag {
-    padding-top: 3vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 20vh;
 }
 .country-flag img {
     height: 7vh;
     width: auto;
+    vertical-align: middle
 }
 .country-flag span {
+    vertical-align: middle;
     padding-left: 3vw;
     color:rgb(54, 54, 54);
     font-size: 3rem;

@@ -2,3 +2,13 @@
     width: 22vw;
     height: auto;
 }
+
+.random-playlist {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.random-playlist iframe {
+    height: 35vh;
+}

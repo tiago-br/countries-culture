@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     height: 20vh;
+    align-items: center;
 }
 .title-movie img{
     height: 7vh;
@@ -22,6 +23,7 @@
     display: flex;
     padding: 0px;
     line-height: 15px;
+    font-size: 1.2rem;
 }
 
 .movie-page-img {
