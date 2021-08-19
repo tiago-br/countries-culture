@@ -33,6 +33,10 @@
     
 }
 
+.random-link{
+    margin-bottom: 30px;
+}
+
 .nav-link-card-flag:hover{
     background-color: rgba(197, 197, 197, 0.459);
 }
@@ -73,7 +77,7 @@
 .homepage-about{
     
     width: 90vw;
-    height: 35vh;
+    height: 30vh;
 }
 
 .homepage-about p{
