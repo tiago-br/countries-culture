@@ -20,7 +20,6 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}></Route>
           {/* <Route exact path='/about-us' component={About}></Route> */}
-          {/* <Route exact path='/random-country' component={RandomCountry}></Route> */}
           <Route exact path='/country:countryName' component={CountryPage}></Route>
           <Route exact path='/country:countryName/recipes:demonym' component={RecipesList}></Route>
           <Route exact path='/country:countryName/recipes:demonym/:recipe' component={RecipeDetails}></Route>
