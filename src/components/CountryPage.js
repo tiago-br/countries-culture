@@ -26,14 +26,14 @@ class CountryPage extends Component {
         let moviesByName = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country.name}&include_adult=false`)
         let moviesByDemonym = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f05aeed2f8c839cd62679c6069ef53d&query=${country.demonym}&include_adult=false`)
         let movies = [...moviesByName.data.results, ...moviesByDemonym.data.results];
-        let movie = movies[Math.ceil(Math.random()*movies.length)]
+        let movie = movies[Math.floor(Math.random()*movies.length)]
 
         if(recipes.data.meals===null){
             recipes ={
                 strMealThumb:"https://st.depositphotos.com/1007298/1493/i/950/depositphotos_14931205-stock-photo-open-old-recipe-book.jpg"
             }
         }else{
-            recipes = recipes.data.meals[Math.ceil(Math.random()*recipes.data.meals.length)]
+            recipes = recipes.data.meals[Math.floor(Math.random()*recipes.data.meals.length)]
         }
         this.setState({
             recipes,

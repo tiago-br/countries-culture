@@ -48,7 +48,6 @@ class Home extends Component {
         <div>
             <Navbar/>
             <div className="home-container">
-            {/* no home-container esta o background color verde */}
             <section className="homepage-about"><h1 id="name-page">Countries & Culture</h1><p>
                 This is a simple page with some cultural information about countries over the world.
                 <br/> Please click in some flag to know more about cuisine, movies and musics from that country.
