@@ -1,0 +1,80 @@
+.about-us-page{
+    margin-top: 0;
+    padding-top: 0;
+    width: 100vw;
+    background-color: #F7FFF7;
+}
+
+.about-us-page h1{
+    margin-top: 0;
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(54, 54, 54)!important;
+}
+.about-project-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-project-container img{
+    width: 30vw;
+}
+
+.about-project-p{
+    width: 40vw;
+    text-align: justify;
+    font-size: 1.1rem;
+    color:rgb(54, 54, 54);
+    line-height: 1.1rem + 1vh;
+    
+
+}
+
+.about-project-container ul li{
+    list-style-type:circle;
+    color:rgb(54, 54, 54);
+    padding-bottom: 1vh;
+   
+}
+
+
+.about-project-container ul li a{
+    list-style-type:circle;
+    color:rgb(54, 54, 54);
+}
+
+.about-project-container ul li a:hover{
+    list-style-type:circle;
+    color:lightseagreen;
+}
+
+
+
+.img-github{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 7.5vw;
+}
+
+.contact-creators{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-creators-box{
+    text-align: center;
+}
+.git-logo-img{
+    width: 5vw;
+}
+
+.contact-creators-box h3{
+    vertical-align: middle;
+}
+
+.git-logo-img-contaie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

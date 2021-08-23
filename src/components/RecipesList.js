@@ -1,8 +1,10 @@
 import { Component } from "react";
 import axios from 'axios'
+
 import Navbar from "./Navbar";
-import './RecipesList.css'
 import RecipesListCard from "./RecipeListCard";
+
+import './RecipesList.css'
 
 class RecipesList extends Component {
     state={
