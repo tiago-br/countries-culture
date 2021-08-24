@@ -39,14 +39,28 @@ class AboutUs extends Component {
                             </div>
                         </div>
                     </section>
-                    <section>
+                    <section className='creators-container'>
                         <h1>About Us</h1>
                         <div className="contact-creators">
                             <div className="contact-creators-box">
-                                <a href="https://github.com/AnaCRDEL"><div ><img className="img-github" src="https://avatars.githubusercontent.com/u/82835538?v=4" alt="Ana Carolina Lima"/></div><div className="git-logo-img-contaie"><img className="git-logo-img"src={gitLogo} alt="Github"/><h3>Ana Carolina Lima</h3></div></a>
+                                <img className="img-github" src="https://avatars.githubusercontent.com/u/82835538?v=4" alt="Ana Carolina Lima"/>
+                                <div>
+                                    <h3>Ana Carolina Raphael de Lima</h3>
+                                    <div className="contact-creators-links">
+                                    <a className='link' href="https://github.com/AnaCRDEL"><img className="git-logo-img" src={gitLogo} alt="Github"/>GitHub</a>
+                                    <a className='link' href="https://www.linkedin.com/in/anacarolinardel/"><img className="linkedin-logo-img" src='https://image.flaticon.com/icons/png/512/174/174857.png' alt="Linkedin"/>Linkedin</a>
+                                    </div>
+                                </div>
                             </div>
                             <div className="contact-creators-box">
-                                <a href="https://github.com/tiago-br"><div ><img className="img-github" src="https://avatars.githubusercontent.com/u/82057413?v=4" alt="Tiago Rebelato"/></div><div className="git-logo-img-contaie"><img className="git-logo-img"src={gitLogo} alt="Github"/><h3>Tiago de Biagi Rebelato</h3></div></a>
+                                <img className="img-github" src="https://avatars.githubusercontent.com/u/82057413?v=4" alt="Ana Carolina Lima"/>
+                                <div>
+                                    <h3>Tiago de Biagi Rebelato</h3>
+                                    <div className="contact-creators-links">
+                                    <a className='link' href="https://github.com/tiago-br"><img className="git-logo-img" src={gitLogo} alt="Github"/>GitHub</a>
+                                    <a className='link' href="https://www.linkedin.com/in/tiago-rebelato-076808209/"><img className="linkedin-logo-img" src='https://image.flaticon.com/icons/png/512/174/174857.png' alt="Linkedin"/>Linkedin</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         

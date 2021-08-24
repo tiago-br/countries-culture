@@ -7,7 +7,7 @@
 
 .about-us-page h1{
     margin-top: 0;
-    padding-top: 5vh;
+    padding-top: 2vh;
     text-align: center;
     font-size: 2rem;
     color:rgb(54, 54, 54)!important;
@@ -50,7 +50,9 @@
 }
 
 
-
+.creators-container{
+    height: 40vh;
+}
 .img-github{
     width: 10vw;
     height: 10vw;
@@ -64,17 +66,32 @@
 
 .contact-creators-box{
     text-align: center;
+    display: flex;
 }
 .git-logo-img{
     width: 3vw;
+    margin-right: 1vh;
+}
+.linkedin-logo-img{
+    width: 2vw;
+    margin-left: 1vh;
+    margin-right: 2vh;
+    margin-top: 1vh;
 }
 
 .contact-creators-box h3{
     vertical-align: middle;
+    margin-left: 2vh;
 }
 
-.git-logo-img-contaie{
+.contact-creators-links{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 2vh;
+}
+
+.link{
+    text-decoration: none;
+    color:rgb(54, 54, 54);
 }
