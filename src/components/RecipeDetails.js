@@ -31,7 +31,7 @@ class RecipeDetails extends Component{
             <div>
             <Navbar className="nav-bar-recipe-details"/>
             {this.state.load ?
-                <div>
+                <div className="recipe-details-page">
                     <div className="container-title-recipe">
                         <h1><img src={this.state.imgFlag} alt={`${this.props.match.params.countryName}-flag`}/><span>{this.props.match.params.recipe}</span></h1>
                     </div>
