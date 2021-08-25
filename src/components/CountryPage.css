@@ -99,6 +99,10 @@
     height: 50vh;
 }
 
+.card-img-rnd {
+    text-align: center;
+}
+
 .card-img-rnd p{
     text-align: center;
     margin-bottom: 1vh;

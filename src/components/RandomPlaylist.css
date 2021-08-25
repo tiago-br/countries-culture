@@ -11,4 +11,9 @@
 
 .random-playlist iframe {
     height: 35vh;
+    max-width: 25vw;
+}
+
+.random-playlist p {
+    max-width: 25vw
 }
