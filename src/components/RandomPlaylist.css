@@ -1,9 +1,4 @@
 @media(min-width:1025){
-    #not-found-img {
-        width: 22vw;
-        height: auto;
-    }
-
     .random-playlist {
         display: flex;
         justify-content: center;
@@ -15,11 +10,6 @@
     }
 }
 @media(max-width:1025){
-    #not-found-img {
-        width: 80vw;
-        height: 80vh;
-    }
-
     .random-playlist {
         display: flex;
         justify-content: center;
@@ -36,4 +26,9 @@
 .random-playlist iframe {
     height: 40vh;
     max-width: 90vw;
+}
+
+.not-found-img {
+    width: 25vw;
+    height: auto;
 }
