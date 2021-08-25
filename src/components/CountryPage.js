@@ -65,10 +65,10 @@ class CountryPage extends Component {
                     </section>
                 </div>
                     <section className="random-links-cards">
-                        <div>
+                        <div className="rnd-card">
                             <RandomRecipeCard image={this.state.recipes.strMealThumb} demonym={this.state.country.demonym} meal={this.state.recipes.strMeal} countryName={this.props.match.params.countryName}/>
                         </div>
-                        <div>
+                        <div className="rnd-card">
                             <RandomMovieCard movie={this.state.movie} demonym={this.state.country.demonym} countryName={this.props.match.params.countryName} />
                         </div>
                         <div>
