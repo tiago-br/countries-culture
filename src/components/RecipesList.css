@@ -27,6 +27,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         width: 90vw;
+        background-color: #F7FFF7;
     }
 
     .img-recipe-list-card{
@@ -38,6 +39,7 @@
     .recipes-section{
         display: flex;
         justify-content: space-around;
+        background-color: #F7FFF7;
         
     }
     .recipe-list-card-container{
