@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 import Navbar from './Navbar';
-import { NavLink } from 'react-router-dom';
 import CardCountry from './CardCountry';
 import "./Home.css"
 
@@ -11,6 +11,7 @@ class Home extends Component {
     state = {
         countries:[],
         searchCountries:[],
+        countriesByContinent: [],
     }
 
     componentDidMount() {
@@ -41,9 +42,31 @@ class Home extends Component {
         return randomCountry.name
     }
 
-    render() {
+    handleCheckedContinent = (event) => {
+        let selectedCountries = []
+        let countriesByContinent = []
+        if (event.target.checked) {
+            selectedCountries = this.state.countries.filter((country) => {
+                return country.region.toLowerCase() === event.target.name
+            })
+            countriesByContinent = [...this.state.countriesByContinent, ...selectedCountries]
+        } else {
+            selectedCountries = this.state.countriesByContinent.filter((country) => {
+                return country.region.toLowerCase() !== event.target.name
+            })
+            countriesByContinent = selectedCountries
+        }
+        countriesByContinent.sort(function(a, b){
+            if(a.name < b.name) { return -1; }
+            if(a.name > b.name) { return 1; }
+            return 0;
+        })
+        this.setState({
+            countriesByContinent
+        })
+    }
 
-        
+    render() {
         return (
         <div>
             <Navbar/>
@@ -58,8 +81,33 @@ class Home extends Component {
             <input className="search-filter-country" type="text" placeholder="Search Country" name="filterCountries" onChange={(e)=>{
                 this.handleSearchFilter(e)
             }}/>
+            <div className='continentSelection'>
+                <p>See only countries from:</p>
+                <input type="checkbox" id="africa" name="africa" onChange={this.handleCheckedContinent}/>
+                <label for="africa">Africa</label>
+                <input type="checkbox" id="americas" name="americas" onChange={this.handleCheckedContinent}/>
+                <label for="americas">Americas</label>
+                <input type="checkbox" id="asia" name="asia" onChange={this.handleCheckedContinent}/>
+                <label for="asia">Asia</label>
+                <input type="checkbox" id="europe" name="europe" onChange={this.handleCheckedContinent}/>
+                <label for="europe">Europe</label>
+                <input type="checkbox" id="oceania" name="oceania" onChange={this.handleCheckedContinent}/>
+                <label for="oceania">Oceania</label>
+            </div>
                 <div className="home-container-cards">
-                    {this.state.searchCountries.map(country => country.demonym ? <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/> : null ) }             
+                    {this.state.countriesByContinent.length > 0 
+                        ?
+                        this.state.countriesByContinent.map(country => country.demonym 
+                            ?
+                            <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/> 
+                            : 
+                            null )
+                        :
+                        this.state.searchCountries.map(country => country.demonym 
+                            ? <CardCountry flag={country.flag} key={country.alpha3Code} alpha3Code={country.alpha3Code} name={country.name}/> 
+                            : 
+                            null )
+                        }
             </div>
             </div>
         </div>
