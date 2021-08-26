@@ -1,75 +1,161 @@
-.container-title-recipe{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20vh;
+.recipe-details-page{
+    background-color: #F7FFF7;
 }
-.container-title-recipe img {
-    height: 7vh;
-    width: auto;
-    vertical-align: middle;
-}
-.container-title-recipe span{
-    padding-left: 3vw;
-    color:rgb(54, 54, 54);
-    font-size: 3rem;
-    font-weight: 700;
-    vertical-align: middle;
-}
+@media(min-width:1025px){
+    .container-title-recipe{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+    }
+    .container-title-recipe img {
+        height: 7vh;
+        width: auto;
+        vertical-align: middle;
+    }
+    .container-title-recipe span{
+        padding-left: 3vw;
+        color:rgb(54, 54, 54);
+        font-size: 3rem;
+        font-weight: 700;
+        vertical-align: middle;
+    }
 
-.ingredients-container{
-    margin-left: 5vw;
-    width: 45vw;
-    display: flex;
-    color:rgb(54, 54, 54);
+    .ingredients-container{
+        margin-left: 5vw;
+        width: 45vw;
+        display: flex;
+        color:rgb(54, 54, 54);
+        
+    }
+    .ingredients-container h2{
+        text-align: center;
+    }
+
+    .ingredients-container li{
+        margin-bottom: 1.5vh;
+        font-size: 1.2rem;
+    }
+
+    .constainer-list-measure ul{
+        list-style-type:none;
+    }
+
+    .constainer-list-measure{
+        margin-left: 5vw;
+    }
+
+    .container-recipe-details{
+        display: flex;
+        justify-content: space-around;
+    }
+    .img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
-}
-.ingredients-container h2{
-    text-align: center;
+    }
+
+    .img-container img{
+        width:35vw;
+    }
+
+    .instructions-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructions-container h2{
+        font-size: 2rem;
+        
+    }
+
+    .instructions-container p{
+        width: 90vw;
+        text-align: justify;
+        font-size: 1.2rem;
+        
+    }
 }
 
-.ingredients-container li{
-    margin-bottom: 1.5vh;
-    font-size: 1.2rem;
-}
+@media(max-width:1025px){
+    .container-title-recipe{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 25vh;
+    }
+    .container-title-recipe img {
+        height: 7vh;
+        width: auto;
+        vertical-align: middle;
+    }
+    .container-title-recipe span{
+        padding-left: 3vw;
+        color:rgb(54, 54, 54);
+        font-size: 3rem;
+        font-weight: 700;
+        vertical-align: middle;
+    }
 
-.constainer-list-measure ul{
-    list-style-type:none;
-}
+    .ingredients-container{
+        margin-left: 10vw;
+        width: 60vw;
+        display: flex;
+        color:rgb(54, 54, 54);
+        margin-bottom: 5vh;
+        
+    }
+    .ingredients-container h2{
+        text-align: center;
+    }
 
-.constainer-list-measure{
-    margin-left: 5vw;
-}
+    .ingredients-container li{
+        margin-bottom: 1.5vh;
+        font-size: 1.2rem;
+    }
 
-.container-recipe-details{
-    display: flex;
-    justify-content: space-around;
-}
-.img-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
+    .constainer-list-measure ul{
+        list-style-type:none;
+    }
 
-.img-container img{
-    width:35vw;
-}
+    .constainer-list-measure{
+        margin-left: 10vw;
+    }
 
-.instructions-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.instructions-container h2{
-    font-size: 2rem;
+    .container-recipe-details{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
-}
+    }
 
-.instructions-container p{
-    width: 90vw;
-    text-align: justify;
-    font-size: 1.2rem;
-    
+    .img-container img{
+        width:60vw;
+    }
+
+    .instructions-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructions-container h2{
+        font-size: 2rem;
+        
+    }
+
+    .instructions-container p{
+        width: 90vw;
+        text-align: justify;
+        font-size: 1.2rem;
+        
+    }
 }

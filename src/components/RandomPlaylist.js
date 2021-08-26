@@ -66,7 +66,7 @@ class RandomPlaylist extends Component {
     render() {
         if (this.state.randomPlaylist === null || this.state.randomPlaylist === undefined) {
             return (<div>
-            <img src='https://blog.influx.com.br/storage/app/media/uploaded-files/music.jpeg' alt='not-found-img' id='not-found-img'/>
+            <img src='https://blog.influx.com.br/storage/app/media/uploaded-files/music.jpeg' alt='not-found-img' className='not-found-img'/>
             <h3 className='rnd-card-text-link'>Songs not found</h3>
             </div>)
         } else {
