@@ -30,7 +30,6 @@ class MovieDetails extends Component{
     }
 
     render(){
-        console.log(this.state.movie)
         return(
             <>
             <Navbar/>
