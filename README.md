@@ -27,10 +27,10 @@ This project was created with:
 #### Tiago de Biagi Rebelato
 [![Linkedin](./src/img/linkedin4.png)](https://www.linkedin.com/in/tiago-rebelato-076808209/)
 
-[![Github](./src/img/github4.png)](https://github.com/tiago-br)
+[![Github](./src/img/GitHub-Logo.png)](https://github.com/tiago-br)
 
 #### Ana Carolina Raphael de Lima
 [![Linkedin](./src/img/linkedin4.png)](https://www.linkedin.com/in/anacarolinardel/)
 
-[![Github](./src/img/github4.png)](https://github.com/AnaCRDEL)
+[![Github](./src/img/GitHub-Logo.png)](https://github.com/AnaCRDEL)
 
