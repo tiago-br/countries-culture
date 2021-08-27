@@ -99,6 +99,24 @@
     font-size: 2.0rem;
 }
 
+.random-button {
+    border-radius: 2.5vh;
+    width: 100%;
+    height: 6vh;
+    color: rgb(54, 54, 54);
+    background-color: #FFE66D;
+    padding: 10px 20px 10px 20px;
+}
+
+.random-button:hover{
+    background-color: #F8C255;
+}
+
+.continentSelection p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 
 @media(max-width:849px){
     .home-container-cards{
@@ -109,7 +127,6 @@
         overflow: scroll;
         flex-wrap: wrap;
         justify-content: space-between;
-       
     }
     
     .card-country-flag{
@@ -125,5 +142,17 @@
         margin-top: 2vh;
         text-align: center;
         font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .homepage-about{
+        height: 70vw;
+    }
+    .continentSelection {
+        font-size: 1rem;
+        text-align: center;
+    }
+    #name-page {
+        font-size: 1.5rem;
     }
     }

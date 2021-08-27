@@ -71,12 +71,15 @@ class Home extends Component {
         <div>
             <Navbar/>
             <div className="home-container">
-            <section className="homepage-about"><h1 id="name-page">Countries & Culture</h1><p>
-                This is a simple page with some cultural information about countries over the world.
-                <br/> Please click in some flag to know more about cuisine, movies and musics from that country.
-            </p></section>
-            <div className="div-link-container">
-                <NavLink className="link-navbar random-link" to={`/country${this.getRandomCountryName()}`}>Random Country</NavLink>
+            <section className="homepage-about">
+                <h1 id="name-page">Countries & Culture</h1>
+                <p>
+                    This is a simple page with some cultural information about countries over the world.
+                    <br/> Please click in some flag to know more about cuisine, movies and musics from that country.
+                </p>
+            </section>
+            <div className="div-random-button">
+                <NavLink className="random-button" to={`/country${this.getRandomCountryName()}`}>Random Country</NavLink>
             </div>
             <input className="search-filter-country" type="text" placeholder="Search Country" name="filterCountries" onChange={(e)=>{
                 this.handleSearchFilter(e)
