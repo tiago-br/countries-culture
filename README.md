@@ -26,11 +26,9 @@ This project was created with:
 ## Creators
 #### Tiago de Biagi Rebelato
 [![Linkedin](./src/img/linkedin4.png)](https://www.linkedin.com/in/tiago-rebelato-076808209/)
-
 [![Github](./src/img/GitHub-Logo.png)](https://github.com/tiago-br)
 
 #### Ana Carolina Raphael de Lima
 [![Linkedin](./src/img/linkedin4.png)](https://www.linkedin.com/in/anacarolinardel/)
-
 [![Github](./src/img/GitHub-Logo.png)](https://github.com/AnaCRDEL)
 
