@@ -1,50 +1,108 @@
-.movies-page {
-    background-color: #F7FFF7;
+@media(min-width:1025px){
+    .movies-page {
+        background-color: #F7FFF7;
+    }
+    
+    .country-flag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+    .country-flag img {
+        height: 7vh;
+        width: auto;
+        vertical-align: middle
+    }
+    .country-flag span {
+        vertical-align: middle;
+        padding-left: 3vw;
+        color:rgb(54, 54, 54);
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .movies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .movie-card {
+        text-align: center;
+    }
+    .movie-card p {
+        text-align: center;
+        color:rgb(54, 54, 54);
+        width: 35vh;
+    }
+    .movie-img {
+        width: 14vw;
+        height: 40vh;
+        text-align: center;
+    }
+    
+    .movie-img:hover{
+        width: 12vw;
+        height: 38vh;
+        text-align: center;
+        border:3px solid #4ECDC4;
+        border-radius: 2px;
+    }
 }
 
-.country-flag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-}
-.country-flag img {
-    height: 7vh;
-    width: auto;
-    vertical-align: middle
-}
-.country-flag span {
-    vertical-align: middle;
-    padding-left: 3vw;
-    color:rgb(54, 54, 54);
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.movies-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.movie-card {
-    text-align: center;
-}
-.movie-card p {
-    text-align: center;
-    color:rgb(54, 54, 54);
-    width: 35vh;
-}
-.movie-img {
-    width: 14vw;
-    height: 40vh;
-    text-align: center;
-}
-
-.movie-img:hover{
-    width: 12vw;
-    height: 38vh;
-    text-align: center;
-    border:3px solid #4ECDC4;
-    border-radius: 2px;
+@media(max-width:1025px){
+    .movies-page {
+        background-color: #F7FFF7;
+        width: 100vw;
+        margin-left:0;
+        margin-right:0;
+    }
+    
+    .country-flag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+    .country-flag img {
+        height: 7vh;
+        width: auto;
+        vertical-align: middle
+    }
+    .country-flag span {
+        vertical-align: middle;
+        padding-left: 3vw;
+        color:rgb(54, 54, 54);
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .movies-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .movie-card {
+        text-align: center;
+    }
+    .movie-card p {
+        text-align: center;
+        color:rgb(54, 54, 54);
+        width: 60vw;
+    }
+    .movie-img {
+        width: 45vw;
+        height: 35vh;
+        text-align: center;
+    }
+    
+    .movie-img:hover{
+        width: 12vw;
+        height: 38vh;
+        text-align: center;
+        border:3px solid #4ECDC4;
+        border-radius: 2px;
+    }
 }
