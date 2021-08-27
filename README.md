@@ -22,3 +22,14 @@ This project was created with:
 - CSS
 - Javascript
 - React
+
+## Creators
+#### Tiago de Biagi Rebelato
+- [Linkedin](https://www.linkedin.com/in/tiago-rebelato-076808209/)
+- [GitHub](https://github.com/tiago-br)
+
+#### Ana Carolina Raphael de Lima
+- [Linkedin](https://www.linkedin.com/in/anacarolinardel/)
+- [GitHub](https://github.com/AnaCRDEL)
+
+
