@@ -1,44 +1,103 @@
-.title-movie{
-    display: flex;
-    justify-content: center;
-    height: 20vh;
-    align-items: center;
-}
-.title-movie img{
-    height: 7vh;
-    width: auto;
-    vertical-align: middle;
-}
-.title-movie span{
-    padding-left: 3vw;
-    color:rgb(54, 54, 54);
-    font-size: 3rem;
-    font-weight: 700;
-    vertical-align: middle;
+@media(min-width:1025px){
+    .title-movie{
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+        align-items: center;
+    }
+    .title-movie img{
+        height: 7vh;
+        width: auto;
+        vertical-align: middle;
+    }
+    .title-movie span{
+        padding-left: 3vw;
+        color:rgb(54, 54, 54);
+        font-size: 3rem;
+        font-weight: 700;
+        vertical-align: middle;
+    }
+    
+    
+    .movie-container {
+        margin: 0px 0px 0px 150px;
+        display: flex;
+        padding: 0px;
+        line-height: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .movie-page-img {
+        height: 350px;
+        width: auto;
+        margin: 50px 30px 30px 100px;
+    }
+    
+    .movie-details {
+        width: 600px;
+        text-align: left;
+        color:rgb(54, 54, 54);
+    }
+    .movie-details p {
+        display: flex;
+        text-align: left;
+        color:rgb(54, 54, 54);
+    }
 }
 
+@media(max-width:1025px){
+    .title-movie{
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+        align-items: center;
+        
+    }
+    .title-movie img{
+        height: 10vw;
+        width: auto;
+        vertical-align: middle;
+    }
+    .title-movie span{
+        padding-left:1vh;
+        color:rgb(54, 54, 54);
+        font-size: 1.5rem;
+        font-weight: 700;
+        vertical-align: middle;
+    }
+    
+    
+    .movie-container {
+        width: 90vw;
+        margin-left: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        line-height: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .movie-page-img {
+        height: 70vw;
+        width: auto;
 
-.movie-container {
-    margin: 0px 0px 0px 150px;
-    display: flex;
-    padding: 0px;
-    line-height: 15px;
-    font-size: 1.2rem;
-}
-
-.movie-page-img {
-    height: 350px;
-    width: auto;
-    margin: 50px 30px 30px 100px;
-}
-
-.movie-details {
-    width: 600px;
-    text-align: left;
-    color:rgb(54, 54, 54);
-}
-.movie-details p {
-    display: flex;
-    text-align: left;
-    color:rgb(54, 54, 54);
+    }
+    .movie-poster{
+        text-align: center;
+        width: 80vw;
+    }
+    
+    .movie-details {
+        width: 80vw;
+        text-align: left;
+        color:rgb(54, 54, 54);
+    }
+    .movie-details p {
+        width: 80vw;
+        display: flex;
+        text-align: left;
+        color:rgb(54, 54, 54);
+    }
 }
